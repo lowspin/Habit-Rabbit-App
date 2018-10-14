@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        >
+
+        <android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+
+            <!-- EditText for Project Title input -->
+            <EditText
+                android:id="@+id/editTextProjectTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_project_title"
+                android:paddingBottom="@dimen/activity_horizontal_margin" />
+
+            <!-- EditText for getttaskEntrytask description input -->
+            <EditText
+                android:id="@+id/editTextProjectDescription"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextProjectTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_project_description"
+                android:paddingBottom="@dimen/activity_horizontal_margin" />
+
+
+            <EditText
+                android:id="@+id/editTextRepetition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextProjectDescription"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:hint="@string/edit_project_repetition"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:id="@+id/tv_reminder_label"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:text="@string/reminder_string"
+                android:textColor="@android:color/primary_text_light"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRepetition" />
+
+            <Switch
+                android:id="@+id/reminderSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRepetition" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/block_reminder_settings"
+                app:layout_constraintTop_toBottomOf="@+id/reminderSwitch"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="@+id/guideline"
+                android:background="@color/toggleOff"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!-- CheckBoxes for day of week selection -->
+            <LinearLayout
+                android:id="@+id/togglegroup_day"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="@dimen/toggle_button_group_width"
+                android:layout_height="@dimen/toggle_button_group_height"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <ToggleButton
+                    android:id="@+id/tg_switch_day0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@drawable/toggle_selector"
+                    android:textColor="@color/materialRed"
+                    android:textOn="@string/day_sunday"
+                    android:textOff="@string/day_sunday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@drawable/toggle_selector"
+                    android:textOn="@string/day_monday"
+                    android:textOff="@string/day_monday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@drawable/toggle_selector"
+                    android:textOn="@string/day_tuesday"
+                    android:textOff="@string/day_tuesday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@drawable/toggle_selector"
+                    android:textOn="@string/day_wednesday"
+                    android:textOff="@string/day_wednesday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:background="@drawable/toggle_selector"
+                    android:textOn="@string/day_thursday"
+                    android:textOff="@string/day_thursday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toggle_selector"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:textOn="@string/day_friday"
+                    android:textOff="@string/day_friday" />
+                <ToggleButton
+                    android:id="@+id/tg_switch_day6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toggle_selector"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:textColor="@color/materialOrange"
+                    android:textOn="@string/day_saturday"
+                    android:textOff="@string/day_saturday" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_reminder_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/togglegroup_day"
+                android:text="7:00"
+                style="@style/TextAppearance.AppCompat.Display1" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_password_label"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/require_approval_title"
+                android:textColor="@android:color/primary_text_light"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/block_reminder_settings" />
+
+            <Switch
+                android:id="@+id/switch_password"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@+id/block_reminder_settings"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_whatspasswordfor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password_label"
+                app:layout_constraintEnd_toEndOf="@+id/tv_password_label"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/whats_that"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <!-- Add button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_weight="1"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_button"
+        android:textColor="@android:color/primary_text_dark"
+        />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBoxPreference
+        android:key="pref_allow_multiple"
+        android:icon="@drawable/ic_add_to_photos_black_24dp"
+        android:defaultValue="true"
+        android:summaryOff="@string/pref_single_entries"
+        android:summaryOn="@string/pref_multiple_entries"
+        android:title="@string/pref_multiple_entries_title" />
+
+    <EditTextPreference
+        android:key="pref_password"
+        android:icon="@drawable/ic_lock_outline_black_24dp"
+        android:title="@string/change_password_title"
+        />
+
+</PreferenceScreen>

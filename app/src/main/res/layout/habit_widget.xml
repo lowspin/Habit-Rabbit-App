@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <ProgressBar
+        android:id="@+id/widget_proj_progress_ring"
+        style="?android:progressBarStyleHorizontal"
+        android:progress="80"
+        android:progressDrawable="@drawable/ring_thin"
+        android:layout_width="@dimen/widget_progressbar"
+        android:layout_height="@dimen/widget_progressbar"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="@color/justWhite"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowRadius="10"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        style="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/appwidget_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/appwidget_text"
+        android:contentDescription="@string/appwidget_label"
+        android:text="@string/appwidget_label"
+        android:textColor="@color/justWhite"
+        style="@style/TextAppearance.AppCompat.Body1" />
+
+</RelativeLayout>

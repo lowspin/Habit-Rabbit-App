@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <ImageView
+            android:id="@+id/iv_sticker_01"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin_big"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toStartOf="@+id/iv_sticker_02"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rabbit_01" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_02"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin_big"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rabbit_02" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_03"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin_big"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rabbit_03" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_04"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/activity_vertical_margin_big"
+            app:layout_constraintStart_toEndOf="@+id/iv_sticker_03"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_rabbit_04" />
+
+
+        <ImageView
+            android:id="@+id/iv_sticker_05"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toStartOf="@+id/iv_sticker_06"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            app:srcCompat="@drawable/ic_rabbit_05" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_06"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            app:srcCompat="@drawable/ic_rabbit_06" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_07"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            app:srcCompat="@drawable/ic_rabbit_07" />
+
+        <ImageView
+            android:id="@+id/iv_sticker_08"
+            android:layout_width="@dimen/sticker_size"
+            android:layout_height="@dimen/sticker_size"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:layout_constraintStart_toEndOf="@+id/iv_sticker_07"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            app:srcCompat="@drawable/ic_rabbit_08" />
+
+        <TextView
+            android:id="@+id/tv_date_completed"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Date: "
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sticker_05" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/action_enter_PIN"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_completed"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/button_cancel_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/cancel_button"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <Button
+            android:id="@+id/button_ok_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/add_button"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/button_cancel_choose" />
+
+        <TextView
+            android:id="@+id/tv_remove_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin_big"
+            android:text="@string/action_delete_progress"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/button_cancel_choose" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/activity_vertical_margin_big"
+            app:layout_constraintTop_toBottomOf="@+id/tv_remove_record"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

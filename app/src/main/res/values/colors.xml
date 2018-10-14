@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="justWhite">#ffffff</color>
+    <color name="justBlack">#000000</color>
+    <color name="kindagrey">#aaaaaa</color>
+
+    <!-- colors toggle buttons -->
+    <color name="toggleOn">#66bb6a</color>
+    <color name="toggleOff">#e8f5e9</color>
+
+    <!-- colors taskEntrytask priority selection -->
+    <color name="materialRed">#E74C3C</color>
+    <color name="materialOrange">#E67E22</color>
+    <color name="materialYellow">#F1C40F</color>
+
+</resources>

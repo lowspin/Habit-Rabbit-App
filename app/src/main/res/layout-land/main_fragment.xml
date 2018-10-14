@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:nestedScrollingEnabled="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity$PlaceholderFragment">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_main_fragment_10pct"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_main_fragment"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.57"/>
+
+        <LinearLayout
+            android:id="@+id/group_title"
+            android:layout_width="@dimen/project_info_group_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_main_fragment"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/proj_title"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+                android:text="Project Title" />
+
+            <TextView
+                android:id="@+id/proj_desc"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+                android:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/proj_practice"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+                android:text="Practice Days" />
+
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/group_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/guideline_main_fragment"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/proj_progress_ring"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="@dimen/project_progressbar"
+                android:layout_height="@dimen/project_progressbar"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:progress="80"
+                android:progressDrawable="@drawable/ring"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/proj_progress_text"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:layout_width="@dimen/project_progressbar"
+                android:layout_height="@dimen/project_progressbar"
+                android:gravity="center"
+                android:text="80%"
+                app:layout_constraintBottom_toBottomOf="@+id/proj_progress_ring"
+                app:layout_constraintEnd_toEndOf="@+id/proj_progress_ring"
+                app:layout_constraintStart_toStartOf="@+id/proj_progress_ring"
+                app:layout_constraintTop_toTopOf="@+id/proj_progress_ring" />
+
+            <ImageView
+                android:id="@+id/iv_get_started"
+                android:layout_width="@dimen/project_get_started_image"
+                android:layout_height="@dimen/project_get_started_image"
+                android:contentDescription="@string/main_project_get_started"
+                android:src="@drawable/ic_start_and_finish"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proj_progress_text" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/group_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proj_progress_ring">
+
+                <TextView
+                    android:id="@+id/tv_label_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/main_project_progress"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_progress_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="40 / 50"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_label_progress"
+                    app:layout_constraintStart_toEndOf="@+id/tv_label_progress"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_label_interval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label_progress"
+                    android:text="@string/main_project_interval"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_label_interval"
+                    app:layout_constraintStart_toEndOf="@+id/tv_label_interval"
+                    android:text="1.23 days"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
