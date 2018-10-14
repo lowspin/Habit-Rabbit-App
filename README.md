@@ -37,7 +37,45 @@ To facilitate internationalization, app keeps all strings in a strings.xml file 
 App includes support for accessibility by using SP (scalable point) units for text font sizes, which is sensitive to the user's display settings.
 
 ## Screen Shots
-..
+### Main Project Summary
+The main project activity shows a summary of the progress for each project, in both percentage and absolute numbers, along with the average interval between practice.
+
+On-Going Project            |  New Project
+:-------------------------:|:-------------------------:
+<img src="./img/img01-project-summary.png" width="240"> | <img src="./img/img02-project-summary2.png" width="240">
+
+### Reward Sticker Book
+The progress update activity consist of a grid of empty square corresponding to the number of repetitions. This is the main “reward” part of the app - having an grid of empty squares motivates a user to fill them with attractive virtual “stickers”. When user completes a practice/repetition, a new sticker is added. If parental approval is required, the chosen image is greyed out to indicate that it is waiting for approval. A parent can then click the same box, key in a password and approve the item.
+
+Portrait Mode           |  Landscape Mode
+:-------------------------:|:-------------------------:
+<img src="./img/img03-reward-stickers.png" width="240"> | <img src="./img/img04-reward-stickers-landscape.png" width="480">
+
+### Choose Stickers and Completion Reward
+User clicks on an empty box and a secondary dialog allows him/her to choose a “sticker” design to use for the chosen box. When all boxes are filled, a special completion reward image is shown.
+
+Choose Stickers           |  Completion Reward
+:-------------------------:|:-------------------------:
+<img src="./img/img05-choose-stickers.png" width="240"> | <img src="./img/img05-choose-stickers.png" width="240">
+
+### Configure / Update Project
+The project configuration sceen allows user to select the number of repetitions, days and time to set notification reminders, and whether or not parental approval is required.
+
+Menu            |  Edit Project
+:-------------------------:|:-------------------------:
+<img src="./img/img07-menu.png" width="240"> | <img src="./img/img08-add-edit-project.png" width="240">
+
+### Widgets and Notifications
+The "Trigger" part of the habit loop is handled by a widget, which shows the number of on-going projects and the average completion rate of all projects, and a timely notification to remind the user to practice.
+
+Widget            |  Notification
+:-------------------------:|:-------------------------:
+<img src="./img/img10-widgets.png" width="240"> | <img src="./img/img11-reminder-notifications.png" width="240">
+
+### Miscellaneous Settings
+User can change settings in the Settings screen.
+
+<img src="./img/img09-settings.png" width="240">
 
 ## Key Considerations
 ### Data Persistence
@@ -61,7 +99,7 @@ Two flavors of the app are made - the free version has limited functionality and
 * Google Analytics 16.0.4 (com.google.android.gms:play-services-analytics:16.0.4) - analytics to track usage and trends. 
 
 ## Credits
-Icons - www.flaticon.com 
-Reward Graphics - unsplash.com
+* Icons - www.flaticon.com 
+* Reward Graphics - www.unsplash.com
 
 
