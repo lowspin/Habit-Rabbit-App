@@ -1,6 +1,11 @@
 # Habit-Rabbit-App
 Capstone Project Submission for Udacity's Android Developer Nanodegree Program (Grow With Google)
 
+## API Keys
+Note: The following temporary IDs should be replaced.
+* Google Analytics Tracking ID - [/res/global_tracker.xml](https://github.com/lowspin/Habit-Rabbit-App/blob/master/app/src/main/res/xml/global_tracker.xml)
+* Google AdMob Ad ID - [DefaultApplication.java](https://github.com/lowspin/Habit-Rabbit-App/blob/master/app/src/main/java/com/teachableapps/capstoneproject/DefaultApplication.java)
+
 ## Description
 According to Charles Duhigg’s book “The Power Of Habit”, habits are formed with repeated 3-step loops: trigger, action and reward, e.g. 
 
