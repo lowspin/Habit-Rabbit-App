@@ -32,6 +32,9 @@
     <string name="confirm_delete_project_text">This cannot be undone. Do you really want to delete this project?</string>
     <string name="no_alarm">No Alarm</string>
 
+    <!-- Strings for FABs -->
+    <string name="fab_update_progress">Update Progress</string>
+
     <!-- Strings for AddTaskActivity -->
     <!-- unicode character for "..." = "&#8230;" -->
     <string name="edit_project_title">Project Title</string>

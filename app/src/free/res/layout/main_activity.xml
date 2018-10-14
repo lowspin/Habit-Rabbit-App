@@ -49,7 +49,8 @@ tools:context=".ui.MainActivity">
         <!--android:layout_gravity="end|bottom"-->
         <!--android:layout_margin="@dimen/fab_margin"-->
         <!--android:layout_marginBottom="72dp"-->
-        <!--app:srcCompat="@drawable/ic_add_white_24dp" />-->
+        <!--app:srcCompat="@drawable/ic_add_white_24dp"-->
+        <!--android:contentDescription="@string/fab_update_progress"/>-->
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
