@@ -302,13 +302,13 @@ public class AddProjectActivity extends AppCompatActivity {
                     remindMins = toMinsFromString(remindTimeStr);
 
                     // Set reminder notifications
-                    schduleNotification(0, mHour, mMins, daysofWeek[0]? true: false); // Sun
-                    schduleNotification(1, mHour, mMins, daysofWeek[1]? true: false); // Mon
-                    schduleNotification(2, mHour, mMins, daysofWeek[2]? true: false); // Tue
-                    schduleNotification(3, mHour, mMins, daysofWeek[3]? true: false); // Wed
-                    schduleNotification(4, mHour, mMins, daysofWeek[4]? true: false); // Thu
-                    schduleNotification(5, mHour, mMins, daysofWeek[5]? true: false); // Fri
-                    schduleNotification(6, mHour, mMins, daysofWeek[6]? true: false); // Sat
+                    schduleNotification(title,0, mHour, mMins, daysofWeek[0]? true: false); // Sun
+                    schduleNotification(title,1, mHour, mMins, daysofWeek[1]? true: false); // Mon
+                    schduleNotification(title,2, mHour, mMins, daysofWeek[2]? true: false); // Tue
+                    schduleNotification(title,3, mHour, mMins, daysofWeek[3]? true: false); // Wed
+                    schduleNotification(title,4, mHour, mMins, daysofWeek[4]? true: false); // Thu
+                    schduleNotification(title,5, mHour, mMins, daysofWeek[5]? true: false); // Fri
+                    schduleNotification(title,6, mHour, mMins, daysofWeek[6]? true: false); // Sat
 
                 }
 
@@ -343,7 +343,7 @@ public class AddProjectActivity extends AppCompatActivity {
 
     }
 
-    private void schduleNotification(int remindDay, int remindHour, int remindMins, boolean onOff) {
+    private void schduleNotification(String title, int remindDay, int remindHour, int remindMins, boolean onOff) {
 
         Context context = this;
 
@@ -365,7 +365,7 @@ public class AddProjectActivity extends AppCompatActivity {
                 .setColor(ContextCompat.getColor(context, R.color.colorPrimary)) // - has a color of R.colorPrimary - use ContextCompat.getColor to get a compatible color
                 .setSmallIcon(R.drawable.ic_rabbit_01) // - has ic_drink_notification as the small icon
                 .setLargeIcon( drawableToBitmap( getResources().getDrawable( R.drawable.ic_rabbit_01 ) ) ) //largeIcon(context)) // - use same icon as the large icon
-                .setContentTitle(mProj.getTitle()) //(context.getString(R.string.habit_reminder_notification_title)) // - sets the title to the habit_reminder_notification_title String resource
+                .setContentTitle(title) //(context.getString(R.string.habit_reminder_notification_title)) // - sets the title to the habit_reminder_notification_title String resource
                 .setContentText(context.getString(R.string.habit_reminder_notification_body)) // - sets the text to the habit_reminder_notification_body String resource
                 .setStyle(new NotificationCompat.BigTextStyle().bigText( // - sets the style to NotificationCompat.BigTextStyle().bigText(text)
                         context.getString(R.string.habit_reminder_notification_body)))
