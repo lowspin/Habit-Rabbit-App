@@ -83,6 +83,7 @@
     <!-- Strings for completion reward -->
     <string name="completion_congrats">Well Done!\nSo Proud of You!</string>
     <string name="completion_fun_action">Rotate the screen to see more images!</string>
+    <string name="internet_iamge_url">https://source.unsplash.com/featured/?cute,safe-kids</string>
 
     <!-- Strings for notifications -->
     <string name="habit_reminder_notification_title">Time to Practice</string>

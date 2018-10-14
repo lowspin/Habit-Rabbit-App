@@ -1,5 +1,6 @@
 package com.teachableapps.capstoneproject.ui;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,6 +20,11 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.teachableapps.capstoneproject.DefaultApplication;
 import com.teachableapps.capstoneproject.R;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,6 +82,7 @@ public class CompletionDialogFragment extends DialogFragment {
 
         // Butterknife
         ButterKnife.bind(this, view);
+        tv_fun_action.setVisibility(View.GONE);
         iv_close_screen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +94,43 @@ public class CompletionDialogFragment extends DialogFragment {
         DefaultApplication application = (DefaultApplication) getActivity().getApplication();
         mTracker = application.getDefaultTracker();
 
+        // Start AsyncTask to check internet connection
+        new testConnection().execute();
+
         return view;
+    }
+
+    public class testConnection extends AsyncTask<Void, Void, Boolean> {
+
+        HttpURLConnection urlc;
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            URL url = null;
+            try {
+                url = new URL(getString(R.string.internet_iamge_url));
+                HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
+                urlc.setConnectTimeout(3000);
+                urlc.connect();
+                if (urlc.getResponseCode() == 200) {
+                    return true;
+                }
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (urlc!=null) {
+                    urlc.disconnect();
+                }
+            }
+            return false;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            tv_fun_action.setVisibility( result? View.VISIBLE : View.GONE);
+        }
     }
 
     @Override
@@ -99,9 +142,9 @@ public class CompletionDialogFragment extends DialogFragment {
 
         // Use Glide to load random image from the internet
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions.diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true);
+        requestOptions.diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).fallback(R.drawable.ic_completion_bg);
         Glide.with(CompletionDialogFragment.this)
-                .load("https://source.unsplash.com/featured/?cute,safe-kids")
+                .load(getString(R.string.internet_iamge_url))
                 .apply(requestOptions)
                 .into(iv_completion);
 
