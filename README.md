@@ -98,7 +98,12 @@ Two flavors of the app are made - the free version has limited functionality and
 * Google Mobile Ads 16.0.0 (com.google.android.gms:play-services-ads:16.0.0) - display ads in free version
 * Google Analytics 16.0.4 (com.google.android.gms:play-services-analytics:16.0.4) - analytics to track usage and trends. 
 
-## Credits
+## API Keys
+Note: The following temporary IDs should be replaced.
+* Google Analytics Tracking ID - [/res/global_tracker.xml](https://github.com/lowspin/Habit-Rabbit-App/blob/master/app/src/main/res/xml/global_tracker.xml)
+* Google AdMob Ad ID - [DefaultApplication.java](https://github.com/lowspin/Habit-Rabbit-App/blob/master/app/src/main/java/com/teachableapps/capstoneproject/DefaultApplication.java)
+
+## Image Credits
 * Icons - www.flaticon.com 
 * Reward Graphics - www.unsplash.com
 
