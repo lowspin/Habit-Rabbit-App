@@ -44,7 +44,7 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin_small"
-                android:text="Project Title" />
+                android:text="@string/placeholder_project_title" />
 
             <TextView
                 android:id="@+id/proj_desc"
@@ -64,7 +64,7 @@
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginBottom="@dimen/activity_vertical_margin_small"
-                android:text="Practice Days" />
+                android:text="@string/placeholder_practice_days" />
 
         </LinearLayout>
 
@@ -96,7 +96,7 @@
                 android:layout_width="@dimen/project_progressbar"
                 android:layout_height="@dimen/project_progressbar"
                 android:gravity="center"
-                android:text="80%"
+                android:text="@string/placeholder_progress_percent"
                 app:layout_constraintBottom_toBottomOf="@+id/proj_progress_ring"
                 app:layout_constraintEnd_toEndOf="@+id/proj_progress_ring"
                 app:layout_constraintStart_toStartOf="@+id/proj_progress_ring"
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="40 / 50"
+                    android:text="@string/placeholder_progress_count"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_label_progress"
                     app:layout_constraintStart_toEndOf="@+id/tv_label_progress"
@@ -161,7 +161,7 @@
                     android:layout_marginStart="@dimen/margin_medium"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_label_interval"
                     app:layout_constraintStart_toEndOf="@+id/tv_label_interval"
-                    android:text="1.23 days"
+                    android:text="@string/placeholder_progress_interval"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
             </android.support.constraint.ConstraintLayout>

@@ -184,7 +184,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/togglegroup_day"
-                android:text="7:00"
+                android:text="@string/default_alarm_time"
                 style="@style/TextAppearance.AppCompat.Display1" />
 
             </android.support.constraint.ConstraintLayout>

@@ -31,6 +31,11 @@
     <string name="confirm_delete_project_title">Confirm Delete?</string>
     <string name="confirm_delete_project_text">This cannot be undone. Do you really want to delete this project?</string>
     <string name="no_alarm">No Alarm</string>
+    <string name="placeholder_project_title">Project Title</string>
+    <string name="placeholder_practice_days">Practice Days</string>
+    <string name="placeholder_progress_percent">80%</string>
+    <string name="placeholder_progress_count">40 / 50</string>
+    <string name="placeholder_progress_interval">1.23 days</string>
 
     <!-- Strings for FABs -->
     <string name="fab_update_progress">Update Progress</string>
@@ -53,6 +58,7 @@
 
     <!-- Strings for UpdateProgressActivity -->
     <string name="action_update_progress">Update Progress</string>
+    <string name="default_alarm_time">7:00</string>
 
     <!-- Strings for choose sticker dialog -->
     <string name="action_delete_progress">[X] Remove this record</string>

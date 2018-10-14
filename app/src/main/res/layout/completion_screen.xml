@@ -25,7 +25,6 @@
     <TextView
         android:id="@+id/tv_completion_screen"
         style="@style/TextAppearance.AppCompat.Display2"
-        android:text="Congratulations!"
         android:gravity="center"
         android:textColor="@color/justWhite"
         android:shadowColor="@color/colorPrimaryDark"
@@ -39,7 +38,6 @@
     <TextView
         android:id="@+id/tv_completion_fun"
         style="@style/TextAppearance.AppCompat.Body1"
-        android:text="Congratulations!"
         android:gravity="center"
         android:textColor="@color/justWhite"
         android:shadowColor="@color/colorPrimaryDark"
