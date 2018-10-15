@@ -37,8 +37,11 @@
     <string name="placeholder_progress_count">40 / 50</string>
     <string name="placeholder_progress_interval">1.23 days</string>
 
-    <!-- Strings for FABs -->
-    <string name="fab_update_progress">Update Progress</string>
+    <!-- Strings for contentDescriptions -->
+    <string name="content_update_progress">Update Progress</string>
+    <string name="content_sticker">virtual sticker</string>
+    <string name="content_completion_image">well done image</string>
+    <string name="content_close_image">close image</string>
 
     <!-- Strings for AddTaskActivity -->
     <!-- unicode character for "..." = "&#8230;" -->

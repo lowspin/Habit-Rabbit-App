@@ -9,6 +9,7 @@
     <ImageView
         android:id="@+id/iv_completion_screen"
         android:background="@color/materialOrange"
+        android:contentDescription="@string/content_completion_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -16,6 +17,7 @@
         android:id="@+id/iv_close_reward_screen"
         android:background="@drawable/ic_close_white_24dp"
         android:backgroundTint="@color/kindagrey"
+        android:contentDescription="@string/content_close_image"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="@dimen/margin_small"

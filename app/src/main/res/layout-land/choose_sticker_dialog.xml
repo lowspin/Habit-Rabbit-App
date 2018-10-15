@@ -25,6 +25,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             app:layout_constraintEnd_toStartOf="@+id/iv_sticker_02"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_01" />
 
         <ImageView
@@ -35,6 +36,7 @@
             android:layout_marginEnd="@dimen/margin_small"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_02" />
 
         <ImageView
@@ -45,6 +47,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin_big"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_03" />
 
         <ImageView
@@ -56,6 +59,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin_big"
             app:layout_constraintStart_toEndOf="@+id/iv_sticker_03"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_04" />
 
 
@@ -68,6 +72,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             app:layout_constraintEnd_toStartOf="@+id/iv_sticker_06"
             app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_05" />
 
         <ImageView
@@ -78,6 +83,7 @@
             android:layout_marginEnd="@dimen/margin_small"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_06" />
 
         <ImageView
@@ -88,6 +94,7 @@
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_07" />
 
         <ImageView
@@ -99,6 +106,7 @@
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintStart_toEndOf="@+id/iv_sticker_07"
             app:layout_constraintTop_toBottomOf="@+id/iv_sticker_01"
+            android:contentDescription="@string/content_sticker"
             app:srcCompat="@drawable/ic_rabbit_08" />
 
         <TextView
